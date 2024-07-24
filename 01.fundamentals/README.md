@@ -235,6 +235,51 @@ Adapting a model (typically via training) to enhance its performance _outside_ o
 | Soft prompting | Few, new parameters | Labeled, task-specific | Learnable prompt params |
 | (cont.) pre-training | All parameters | unlabeled | Same as LLM pre-training |
 
+let's break down and explain these concepts in simple terms:
+
+### Domain Adaptation
+
+**Domain adaptation** is the process of modifying a pre-trained model to improve its performance in a different domain (subject area) than it was originally trained on. For example, if a language model is trained on general news articles, domain adaptation can help it perform better on medical research papers.
+
+### Training Styles
+
+Different training styles can be used for domain adaptation. Here are some common ones:
+
+1. **Fine-Tuning (FT)**
+   - **Modifies**: All parameters of the model.
+   - **Data**: Labeled, task-specific data.
+   - **Summary**: This is a classic machine learning training approach. You take a pre-trained model and further train it on new data specific to the new task or domain. All the model's parameters are updated based on the new data.
+   - **Example**: If you have a general language model and you want to adapt it to legal documents, you would fine-tune it using a dataset of legal texts with labeled examples.
+
+2. **Parameter Efficient Fine-Tuning (PEFT)**
+   - **Modifies**: A few, new parameters.
+   - **Data**: Labeled, task-specific data.
+   - **Summary**: Instead of updating all the parameters of the large language model (LLM), you add a few new parameters that are learnable. This approach is more efficient because it requires less computational power and memory.
+   - **Example**: Adding a small set of new layers or weights that are specifically trained on your new domain data while keeping the majority of the original model unchanged.
+
+3. **Soft Prompting**
+   - **Modifies**: A few, new parameters.
+   - **Data**: Labeled, task-specific data.
+   - **Summary**: This involves learning new parameters that act as prompts for the model. These learnable prompts help the model adapt to new tasks or domains by slightly modifying the input before it reaches the main model.
+   - **Example**: If you want your model to generate poetry instead of regular text, you might use soft prompting to guide it towards more poetic outputs without changing the main model significantly.
+
+4. **(Continued) Pre-Training**
+   - **Modifies**: All parameters.
+   - **Data**: Unlabeled data.
+   - **Summary**: This is similar to the original pre-training of the model but is continued with new, unlabeled data from the target domain. The goal is to further train the model on data from the new domain to enhance its performance.
+   - **Example**: If your model was initially trained on general text but you now have a large corpus of scientific articles, you continue pre-training the model with these articles to make it more proficient in understanding and generating scientific content.
+
+### Real-Life Analogy
+
+Think of adapting a model to a new domain like teaching a chef to cook a new cuisine:
+
+1. **Fine-Tuning**: The chef learns everything from scratch about the new cuisine, adjusting all their cooking methods and recipes.
+2. **Parameter Efficient Fine-Tuning**: The chef only learns a few new recipes or techniques specific to the new cuisine while keeping their overall cooking style the same.
+3. **Soft Prompting**: The chef uses special ingredients or spices (prompts) to give their existing dishes a new twist without changing their fundamental cooking approach.
+4. **(Continued) Pre-Training**: The chef spends time exploring and practicing with the ingredients and dishes of the new cuisine to become more familiar and proficient, building on their existing knowledge.
+
+In summary, domain adaptation involves modifying a pre-trained model to improve its performance in a new domain. Different training styles like fine-tuning, parameter-efficient fine-tuning, soft prompting, and continued pre-training offer various ways to achieve this, each with its own balance of efficiency and effectiveness.
+
 # Decoding
 The process of generating text with an LLM
 * Decoding happens iteratively, 1 word at a time
