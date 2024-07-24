@@ -91,12 +91,15 @@ Encoder don't need as much parameters as Decoders to perform well.
 
 In the context of language models, encoding and decoding refer to two main tasks:
 
-Encoding: This is the process of transforming input text into a format (often called embeddings) that the model can understand and work with.
-Decoding: This is the process of generating text from the encoded information.
+### Encoding:
+ This is the process of transforming input text into a format (often called embeddings) that the model can understand and work with.
+### Decoding:
+ This is the process of generating text from the encoded information.
 Embedding and Text Generation
-Embedding: When text is converted into a numerical form (vectors) that can be processed by the model, this is called embedding. For example, the word "cat" might be represented as a vector like [0.25, -0.36, ...] in a high-dimensional space.
+### Embedding:
+ When text is converted into a numerical form (vectors) that can be processed by the model, this is called embedding. For example, the word "cat" might be represented as a vector like [0.25, -0.36, ...] in a high-dimensional space.
 Text Generation: This involves producing human-like text based on the input. For example, given a prompt, the model can generate a continuation of the text.
-Transformer Architecture
+# Transformer Architecture
 Transformer is a specific architecture for building models that handle tasks like encoding and decoding. Here's a breakdown of its components:
 
 Attention Mechanism:
@@ -116,18 +119,20 @@ Let's use Google Translate as an example:
 
 Encoding: When you input a sentence in English, the model encodes the sentence into embeddings. This means it converts the English words into numerical vectors that capture their meanings and relationships.
 Decoding: The model then decodes these embeddings to generate a sentence in the target language, like Spanish. It uses the context and meaning captured in the embeddings to produce a fluent and accurate translation.
-Why Use Transformer Architecture?
+
+### Why Use Transformer Architecture?
 Efficiency: Transformers handle long-range dependencies better than older models like RNNs (Recurrent Neural Networks). This means they can understand the context of words in long sentences more effectively.
 Parallelization: Transformers allow for parallel processing, making training and inference faster.
 Versatility: They can be used for various tasks such as translation, text generation, summarization, and more.
 Example in Detail
 Imagine you want to translate the sentence "I love programming" into French:
 
-Encoding:
+### Encoding:
 
 The words "I," "love," and "programming" are converted into embeddings.
 The attention mechanism helps the model understand that "I" is the subject, "love" is the verb, and "programming" is the object.
-Decoding:
+
+### Decoding:
 
 Using the embeddings, the model generates the French sentence "J'adore la programmation."
 The attention mechanism ensures that "J'" correctly matches "I" and "adore" matches "love," maintaining the correct context and meaning.
