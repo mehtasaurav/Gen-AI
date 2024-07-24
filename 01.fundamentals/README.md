@@ -98,7 +98,8 @@ In the context of language models, encoding and decoding refer to two main tasks
 Embedding and Text Generation
 ### Embedding:
  When text is converted into a numerical form (vectors) that can be processed by the model, this is called embedding. For example, the word "cat" might be represented as a vector like [0.25, -0.36, ...] in a high-dimensional space.
-Text Generation: This involves producing human-like text based on the input. For example, given a prompt, the model can generate a continuation of the text.
+### Text Generation:
+ This involves producing human-like text based on the input. For example, given a prompt, the model can generate a continuation of the text.
 # Transformer Architecture
 Transformer is a specific architecture for building models that handle tasks like encoding and decoding. Here's a breakdown of its components:
 
@@ -106,19 +107,19 @@ Attention Mechanism:
 
 Definition: A system that allows the model to focus on different parts of the input text when making predictions.
 Function: It helps the model understand the context by weighing the importance of different words in the sentence. For example, in the sentence "The cat sat on the mat," the word "sat" is closely related to "cat."
-Encoder:
 
+### Encoder:
 Function: Processes the input text and converts it into embeddings. It reads the entire input and uses the attention mechanism to understand the context and relationships between words.
 Structure: Multiple layers of attention and feed-forward neural networks.
-Decoder:
 
+### Decoder:
 Function: Generates the output text using the embeddings produced by the encoder. It also uses the attention mechanism to understand the context and predict the next word.
 Structure: Similar to the encoder, with additional layers that help in generating text sequentially.
 Real-Life Example: Google Translate
 Let's use Google Translate as an example:
 
-Encoding: When you input a sentence in English, the model encodes the sentence into embeddings. This means it converts the English words into numerical vectors that capture their meanings and relationships.
-Decoding: The model then decodes these embeddings to generate a sentence in the target language, like Spanish. It uses the context and meaning captured in the embeddings to produce a fluent and accurate translation.
+***Encoding***: When you input a sentence in English, the model encodes the sentence into embeddings. This means it converts the English words into numerical vectors that capture their meanings and relationships.
+***Decoding***: The model then decodes these embeddings to generate a sentence in the target language, like Spanish. It uses the context and meaning captured in the embeddings to produce a fluent and accurate translation.
 
 ### Why Use Transformer Architecture?
 Efficiency: Transformers handle long-range dependencies better than older models like RNNs (Recurrent Neural Networks). This means they can understand the context of words in long sentences more effectively.
