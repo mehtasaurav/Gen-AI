@@ -45,6 +45,42 @@ Think of parameters like ingredients in a recipe. If you're making a simple dish
 
 In summary, "large" in the context of large language models refers to the high number of parameters that the model has, enabling it to learn and perform complex tasks. There's no fixed number that defines "large" because the field is always evolving and different contexts might have different requirements.
 
+Sure, here are some common parameters in language models:
+
+### 1. **Weights**
+- **Definition**: These are the core parameters in neural networks. They are the connections between neurons in different layers.
+- **Function**: Weights determine how much influence one neuron has on another. During training, the model adjusts these weights to minimize errors in its predictions.
+
+### 2. **Biases**
+- **Definition**: Biases are additional parameters in each neuron.
+- **Function**: They allow the model to fit the training data better by adding an extra degree of freedom. Biases help the model to shift the activation function to fit the data more accurately.
+
+### 3. **Activation Functions**
+- **Definition**: Functions applied to the outputs of neurons before passing them to the next layer.
+- **Examples**: Common activation functions include ReLU (Rectified Linear Unit), Sigmoid, and Tanh.
+- **Function**: Activation functions introduce non-linearity into the model, allowing it to learn more complex patterns.
+
+### 4. **Learning Rate**
+- **Definition**: A hyperparameter (a parameter set before the training process begins) that determines how much the model's parameters are adjusted with respect to the loss gradient.
+- **Function**: It controls how quickly the model learns. A high learning rate might make the model learn too quickly and miss the optimal solution, while a low learning rate might make the training process very slow.
+
+### 5. **Dropout Rate**
+- **Definition**: A hyperparameter that specifies the fraction of neurons to drop (set to zero) during training.
+- **Function**: Dropout helps prevent overfitting (when the model performs well on training data but poorly on new data) by randomly ignoring some neurons during each training step, which encourages the model to learn more robust features.
+
+### 6. **Batch Size**
+- **Definition**: The number of training samples used in one iteration of training.
+- **Function**: Affects the stability and speed of the training process. Larger batch sizes can lead to faster, but less stable convergence, while smaller batch sizes can lead to more stable, but slower training.
+
+### Example with GPT-3
+
+Let's use GPT-3, one of the most well-known large language models, as an example. GPT-3 has:
+
+- **175 billion parameters** in total, which include weights and biases spread across numerous layers.
+- **Multiple layers** of neurons (96 layers) with weights connecting neurons in adjacent layers.
+- **Activation functions** (like GeLU - Gaussian Error Linear Unit) applied after the weighted sum of inputs to introduce non-linearity.
+- **Dropout layers** to prevent overfitting during training.
+
 # LLM Architectures
 ## Encoders and Decoders
 Multiple architectures focused on encoding and decoding, i.e., embedding and text generation.
