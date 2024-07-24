@@ -14,6 +14,37 @@ The LLM gives a probability to every word in its vocabularity of appearing next.
 
 "Large" in "large language model" (**L**LM) refers to # of parameters; no agreed-upon treshold
 
+In the term "large language model" (LLM), the word "large" refers to the number of parameters the model has. Let's break down what this means and why there's no agreed-upon threshold for what counts as "large."
+
+### What Are Parameters?
+
+Parameters in a language model are like adjustable settings that help the model make predictions. These settings are tuned during the training process to improve the model's performance on tasks like understanding text, generating sentences, or answering questions. The more parameters a model has, the more complex patterns it can learn from the data.
+
+### Why Is "Large" Important?
+
+1. **Learning Capacity**: More parameters mean the model can learn and store more information, which can improve its ability to understand and generate human-like text.
+2. **Performance**: Larger models often perform better on a wide range of tasks because they can capture more nuances and details from the training data.
+
+### No Agreed-Upon Threshold
+
+There isn't a specific number of parameters that universally defines a model as "large." This is because:
+
+1. **Rapid Advancements**: The field of machine learning is advancing quickly. What was considered a large model a few years ago might now be seen as small compared to the latest models.
+   
+2. **Context Matters**: Different applications and fields might have different standards for what counts as "large." A model that is large for one task might be small for another.
+
+### Real-Life Example
+
+Think of parameters like ingredients in a recipe. If you're making a simple dish, you might only need a few ingredients. But if you're making a complex gourmet meal, you'll need many more ingredients to get the flavors just right. Similarly, a simple model might only need a few parameters, while a more complex model (like those used in advanced language processing) requires many more.
+
+### Example in Numbers
+
+- **Small Model**: A small language model might have around 10 million parameters.
+- **Medium Model**: A medium-sized model could have hundreds of millions of parameters.
+- **Large Model**: Today's large language models, like GPT-4, can have tens of billions or even hundreds of billions of parameters.
+
+In summary, "large" in the context of large language models refers to the high number of parameters that the model has, enabling it to learn and perform complex tasks. There's no fixed number that defines "large" because the field is always evolving and different contexts might have different requirements.
+
 # LLM Architectures
 ## Encoders and Decoders
 Multiple architectures focused on encoding and decoding, i.e., embedding and text generation.
