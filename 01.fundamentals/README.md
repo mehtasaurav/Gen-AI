@@ -45,7 +45,7 @@ Think of parameters like ingredients in a recipe. If you're making a simple dish
 
 In summary, "large" in the context of large language models refers to the high number of parameters that the model has, enabling it to learn and perform complex tasks. There's no fixed number that defines "large" because the field is always evolving and different contexts might have different requirements.
 
-Sure, here are some common parameters in language models:
+### Here are some common parameters in language models:
 
 ### 1. **Weights**
 - **Definition**: These are the core parameters in neural networks. They are the connections between neurons in different layers.
@@ -88,6 +88,50 @@ Multiple architectures focused on encoding and decoding, i.e., embedding and tex
 All the models are built on the Transformer Architecture ---- https://arxiv.org/abs/1706.03762 paper
 
 Encoder don't need as much parameters as Decoders to perform well.
+
+In the context of language models, encoding and decoding refer to two main tasks:
+
+Encoding: This is the process of transforming input text into a format (often called embeddings) that the model can understand and work with.
+Decoding: This is the process of generating text from the encoded information.
+Embedding and Text Generation
+Embedding: When text is converted into a numerical form (vectors) that can be processed by the model, this is called embedding. For example, the word "cat" might be represented as a vector like [0.25, -0.36, ...] in a high-dimensional space.
+Text Generation: This involves producing human-like text based on the input. For example, given a prompt, the model can generate a continuation of the text.
+Transformer Architecture
+Transformer is a specific architecture for building models that handle tasks like encoding and decoding. Here's a breakdown of its components:
+
+Attention Mechanism:
+
+Definition: A system that allows the model to focus on different parts of the input text when making predictions.
+Function: It helps the model understand the context by weighing the importance of different words in the sentence. For example, in the sentence "The cat sat on the mat," the word "sat" is closely related to "cat."
+Encoder:
+
+Function: Processes the input text and converts it into embeddings. It reads the entire input and uses the attention mechanism to understand the context and relationships between words.
+Structure: Multiple layers of attention and feed-forward neural networks.
+Decoder:
+
+Function: Generates the output text using the embeddings produced by the encoder. It also uses the attention mechanism to understand the context and predict the next word.
+Structure: Similar to the encoder, with additional layers that help in generating text sequentially.
+Real-Life Example: Google Translate
+Let's use Google Translate as an example:
+
+Encoding: When you input a sentence in English, the model encodes the sentence into embeddings. This means it converts the English words into numerical vectors that capture their meanings and relationships.
+Decoding: The model then decodes these embeddings to generate a sentence in the target language, like Spanish. It uses the context and meaning captured in the embeddings to produce a fluent and accurate translation.
+Why Use Transformer Architecture?
+Efficiency: Transformers handle long-range dependencies better than older models like RNNs (Recurrent Neural Networks). This means they can understand the context of words in long sentences more effectively.
+Parallelization: Transformers allow for parallel processing, making training and inference faster.
+Versatility: They can be used for various tasks such as translation, text generation, summarization, and more.
+Example in Detail
+Imagine you want to translate the sentence "I love programming" into French:
+
+Encoding:
+
+The words "I," "love," and "programming" are converted into embeddings.
+The attention mechanism helps the model understand that "I" is the subject, "love" is the verb, and "programming" is the object.
+Decoding:
+
+Using the embeddings, the model generates the French sentence "J'adore la programmation."
+The attention mechanism ensures that "J'" correctly matches "I" and "adore" matches "love," maintaining the correct context and meaning.
+In summary, models built on the Transformer architecture are powerful tools for tasks that involve encoding input text into meaningful embeddings and decoding those embeddings to generate output text. This architecture is highly efficient and versatile, making it a popular choice for many natural language processing applications.
 
 ## Encoders
 Models that convert a sequence of words to an embedding (vector representation)
